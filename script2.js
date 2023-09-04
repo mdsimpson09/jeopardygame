@@ -9,16 +9,15 @@ async function getCategoryIds() {
     return _.sampleSize(resp.data, NUM_CATEGORIES);
 
 }
-
-async function getCategory(catId) {
-    const resp = await axios.get(`${BASE_URL}category?id=${catId}`)
+ async function getCategory(catId) {
+   const resp = await axios.get(`${BASE_URL}category?id=${catId}`)
     const title = resp.data.title;
     const clues = resp.data.clues.map(each => {
-        const {question, answer} = each;
-        return ({question, answer, showing: null})
+    const {question, answer} = each;
+     return ({question, answer, showing: null})
     });
 
-    return ({title, clues})
+   return ({title, clues})
 }
 /** Creates rows for table body with proper id (C{category index}-Q{question index})
  * Returns the body text, which needs to be inserted into the game table body
@@ -117,13 +116,11 @@ async function setupAndStart() {
     fillTable();
     hideLoadingView();
     
-
 }
-
 
 setupAndStart();
 
 
 $("tbody").on("click", "td", handleClick);
 
-$("#header").on("click", "#game-but", setupAndStart);
+$("#game-but").on("click", setupAndStart);

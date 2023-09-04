@@ -10,8 +10,7 @@ body {
     display: block;
     margin: 8px;
     color: white;
-    background-color: #2d3443;
-  background-image: linear-gradient(315deg, #2d3443 0%, #000000 74%);
+    background-color: #e9fffc;
 }
 
 p {
@@ -43,12 +42,12 @@ p {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-family: system-ui;
 }
   table, td {
-    border: 2px solid white;
+    border: 2px solid rgb(105, 188, 255);
     align-content: center;
 }
 
@@ -91,7 +90,7 @@ p {
   }
   button {
     text-rendering: auto;
-    color: #28a200;
+    color: #004dc8;
     border-radius: 10px;
     font-family: "Cookie";
     font-size: 30px;
